@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="4b10d9cc-40f3-44e2-9087-e5c932f4a360" name="2070Ti_01" url="http://172.18.233.41">
+        <fileTransfer host="172.18.233.41" port="10001" rootFolder="/home/chenmq/share/FL" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="10001" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="000ec0f5-f6ca-49f4-bae0-76b883eb8767" name="1080-Ti" url="http://172.18.233.33">
+        <fileTransfer host="172.18.233.33" port="22" rootFolder="/home/mengu/FL" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

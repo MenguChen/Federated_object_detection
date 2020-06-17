@@ -1,0 +1,615 @@
+Traceback (most recent call last):
+  File "fl_client.py", line 5, in <module>
+    from model.model_wrapper import Models
+  File "/home/mengu/FL/detection_benchmark/model/__init__.py", line 1, in <module>
+    from model.faster_rcnn_vgg16 import FasterRCNNVGG16
+  File "/home/mengu/FL/detection_benchmark/model/faster_rcnn_vgg16.py", line 2, in <module>
+    import torch as t
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "fl_client.py", line 5, in <module>
+    from model.model_wrapper import Models
+  File "/home/mengu/FL/detection_benchmark/model/__init__.py", line 1, in <module>
+    from model.faster_rcnn_vgg16 import FasterRCNNVGG16
+  File "/home/mengu/FL/detection_benchmark/model/faster_rcnn_vgg16.py", line 2, in <module>
+    import torch as t
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "fl_client.py", line 5, in <module>
+    from model.model_wrapper import Models
+  File "/home/mengu/FL/detection_benchmark/model/__init__.py", line 1, in <module>
+    from model.faster_rcnn_vgg16 import FasterRCNNVGG16
+  File "/home/mengu/FL/detection_benchmark/model/faster_rcnn_vgg16.py", line 2, in <module>
+    import torch as t
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "fl_client.py", line 5, in <module>
+    from model.model_wrapper import Models
+  File "/home/mengu/FL/detection_benchmark/model/__init__.py", line 1, in <module>
+    from model.faster_rcnn_vgg16 import FasterRCNNVGG16
+  File "/home/mengu/FL/detection_benchmark/model/faster_rcnn_vgg16.py", line 2, in <module>
+    import torch as t
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "fl_client.py", line 5, in <module>
+    from model.model_wrapper import Models
+  File "/home/mengu/FL/detection_benchmark/model/__init__.py", line 1, in <module>
+    from model.faster_rcnn_vgg16 import FasterRCNNVGG16
+  File "/home/mengu/FL/detection_benchmark/model/faster_rcnn_vgg16.py", line 2, in <module>
+    import torch as t
+ModuleNotFoundError: No module named 'torch'
+Namespace(config_file='data/task_configs/yolo/street_5/yolo_task3.json', gpu=3, ignore_load='True', port=1234)
+client run on 3
+{'model_name': 'Yolo', 'model_config': 'data/task_configs/yolo/street_5/yolo_model.json', 'log_filename': 'yolo/street_5/FL_client_3_log', 'train': 'data/street_5/3/train.txt', 'test': 'data/street_5/3/test.txt', 'names': 'data/street_5/classes.names', 'n_cpu': 4, 'local_epoch': 5, 'batch_size': 1}
+INFO:client:{'model_name': 'Yolo', 'model_config': 'data/task_configs/yolo/street_5/yolo_model.json', 'log_filename': 'yolo/street_5/FL_client_3_log', 'train': 'data/street_5/3/train.txt', 'test': 'data/street_5/3/test.txt', 'names': 'data/street_5/classes.names', 'n_cpu': 4, 'local_epoch': 5, 'batch_size': 1}
+WARNING:socketIO-client:127.0.0.1:1234/socket.io [engine.io waiting for connection] HTTPConnectionPool(host='127.0.0.1', port=1234): Max retries exceeded with url: /socket.io/?EIO=3&transport=polling&t=1589969998221-0 (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x7f78b7991c88>: Failed to establish a new connection: [Errno 111] Connection refused',))
+Namespace(config_file='data/task_configs/yolo/street_5/yolo_task2.json', gpu=2, ignore_load='True', port=1234)
+client run on 2
+{'model_name': 'Yolo', 'model_config': 'data/task_configs/yolo/street_5/yolo_model.json', 'log_filename': 'yolo/street_5/FL_client_2_log', 'train': 'data/street_5/2/train.txt', 'test': 'data/street_5/2/test.txt', 'names': 'data/street_5/classes.names', 'n_cpu': 4, 'local_epoch': 5, 'batch_size': 1}
+INFO:client:{'model_name': 'Yolo', 'model_config': 'data/task_configs/yolo/street_5/yolo_model.json', 'log_filename': 'yolo/street_5/FL_client_2_log', 'train': 'data/street_5/2/train.txt', 'test': 'data/street_5/2/test.txt', 'names': 'data/street_5/classes.names', 'n_cpu': 4, 'local_epoch': 5, 'batch_size': 1}
+Namespace(config_file='data/task_configs/yolo/street_5/yolo_task4.json', gpu=4, ignore_load='True', port=1234)
+client run on 4
+{'model_name': 'Yolo', 'model_config': 'data/task_configs/yolo/street_5/yolo_model.json', 'log_filename': 'yolo/street_5/FL_client_4_log', 'train': 'data/street_5/4/train.txt', 'test': 'data/street_5/4/test.txt', 'names': 'data/street_5/classes.names', 'n_cpu': 4, 'local_epoch': 5, 'batch_size': 1}
+INFO:client:{'model_name': 'Yolo', 'model_config': 'data/task_configs/yolo/street_5/yolo_model.json', 'log_filename': 'yolo/street_5/FL_client_4_log', 'train': 'data/street_5/4/train.txt', 'test': 'data/street_5/4/test.txt', 'names': 'data/street_5/classes.names', 'n_cpu': 4, 'local_epoch': 5, 'batch_size': 1}
+WARNING:socketIO-client:127.0.0.1:1234/socket.io [engine.io waiting for connection] HTTPConnectionPool(host='127.0.0.1', port=1234): Max retries exceeded with url: /socket.io/?EIO=3&transport=polling&t=1589969999042-0 (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x7f10e409fc88>: Failed to establish a new connection: [Errno 111] Connection refused',))
+WARNING:socketIO-client:127.0.0.1:1234/socket.io [engine.io waiting for connection] HTTPConnectionPool(host='127.0.0.1', port=1234): Max retries exceeded with url: /socket.io/?EIO=3&transport=polling&t=1589969999064-0 (Caused by NewConnectionError('<requests.packages.urllib3.connection.HTTPConnection object at 0x7f40c015fcf8>: Failed to establish a new connection: [Errno 111] Connection refused',))
+Namespace(config_file='data/task_configs/yolo/street_5/yolo_task5.json', gpu=5, ignore_load='True', port=1234)
+client run on 5
+{'model_name': 'Yolo', 'model_config': 'data/task_configs/yolo/street_5/yolo_model.json', 'log_filename': 'yolo/street_5/FL_client_5_log', 'train': 'data/street_5/5/train.txt', 'test': 'data/street_5/5/test.txt', 'names': 'data/street_5/classes.names', 'n_cpu': 4, 'local_epoch': 5, 'batch_size': 1}
+INFO:client:{'model_name': 'Yolo', 'model_config': 'data/task_configs/yolo/street_5/yolo_model.json', 'log_filename': 'yolo/street_5/FL_client_5_log', 'train': 'data/street_5/5/train.txt', 'test': 'data/street_5/5/test.txt', 'names': 'data/street_5/classes.names', 'n_cpu': 4, 'local_epoch': 5, 'batch_size': 1}
+/home/mengu/FL/detection_benchmark/model/utils/nms/non_maximum_suppression.py:12: UserWarning: 
+    the python code for non_maximum_suppression is about 2x slow
+    It is strongly recommended to build cython code: 
+    `cd model/utils/nms/; python3 build.py build_ext --inplace
+  `cd model/utils/nms/; python3 build.py build_ext --inplace''')
+/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/matplotlib/font_manager.py:280: UserWarning: Matplotlib is building the font cache using fc-list. This may take a moment.
+  'Matplotlib is building the font cache using fc-list. '
+/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/matplotlib/__init__.py:1401: UserWarning:  This call to matplotlib.use() has no effect
+because the backend has already been chosen;
+matplotlib.use() must be called *before* pylab, matplotlib.pyplot,
+or matplotlib.backends is imported for the first time.
+
+  warnings.warn(_use_error_msg)
+sent wakeup
+/home/mengu/FL/detection_benchmark/model/utils/nms/non_maximum_suppression.py:12: UserWarning: 
+    the python code for non_maximum_suppression is about 2x slow
+    It is strongly recommended to build cython code: 
+    `cd model/utils/nms/; python3 build.py build_ext --inplace
+  `cd model/utils/nms/; python3 build.py build_ext --inplace''')
+/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/matplotlib/font_manager.py:280: UserWarning: Matplotlib is building the font cache using fc-list. This may take a moment.
+  'Matplotlib is building the font cache using fc-list. '
+/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/matplotlib/__init__.py:1401: UserWarning:  This call to matplotlib.use() has no effect
+because the backend has already been chosen;
+matplotlib.use() must be called *before* pylab, matplotlib.pyplot,
+or matplotlib.backends is imported for the first time.
+
+  warnings.warn(_use_error_msg)
+sent wakeup
+Traceback (most recent call last):
+  File "fl_client.py", line 266, in <module>
+    FederatedClient("127.0.0.1", opt.port, opt.config_file, opt.gpu, opt.ignore_load)
+  File "fl_client.py", line 96, in __init__
+    self.sio.wait()
+  File "/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/socketIO_client/__init__.py", line 251, in wait
+    self._process_packets()
+  File "/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/socketIO_client/__init__.py", line 278, in _process_packets
+    self._process_packet(engineIO_packet)
+  File "/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/socketIO_client/__init__.py", line 491, in _process_packet
+    delegate(parse_socketIO_packet_data(socketIO_packet_data), namespace)
+  File "/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/socketIO_client/__init__.py", line 513, in _on_event
+    namespace._find_packet_callback(event)(*args)
+TypeError: on_init() missing 1 required positional argument: 'request'
+Traceback (most recent call last):
+  File "fl_client.py", line 266, in <module>
+    FederatedClient("127.0.0.1", opt.port, opt.config_file, opt.gpu, opt.ignore_load)
+  File "fl_client.py", line 96, in __init__
+    self.sio.wait()
+  File "/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/socketIO_client/__init__.py", line 251, in wait
+    self._process_packets()
+  File "/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/socketIO_client/__init__.py", line 278, in _process_packets
+    self._process_packet(engineIO_packet)
+  File "/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/socketIO_client/__init__.py", line 491, in _process_packet
+    delegate(parse_socketIO_packet_data(socketIO_packet_data), namespace)
+  File "/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/socketIO_client/__init__.py", line 513, in _on_event
+    namespace._find_packet_callback(event)(*args)
+TypeError: on_init() missing 1 required positional argument: 'request'
+disconnect
+disconnect
+Namespace(config_file='data/task_configs/yolo/street_5/yolo_task1.json', gpu=1, ignore_load='True', port=1234)
+client run on 1
+{'model_name': 'Yolo', 'model_config': 'data/task_configs/yolo/street_5/yolo_model.json', 'log_filename': 'yolo/street_5/FL_client_1_log', 'train': 'data/street_5/1/train.txt', 'test': 'data/street_5/1/test.txt', 'names': 'data/street_5/classes.names', 'n_cpu': 4, 'local_epoch': 5, 'batch_size': 1}
+INFO:client:{'model_name': 'Yolo', 'model_config': 'data/task_configs/yolo/street_5/yolo_model.json', 'log_filename': 'yolo/street_5/FL_client_1_log', 'train': 'data/street_5/1/train.txt', 'test': 'data/street_5/1/test.txt', 'names': 'data/street_5/classes.names', 'n_cpu': 4, 'local_epoch': 5, 'batch_size': 1}
+/home/mengu/FL/detection_benchmark/model/utils/nms/non_maximum_suppression.py:12: UserWarning: 
+    the python code for non_maximum_suppression is about 2x slow
+    It is strongly recommended to build cython code: 
+    `cd model/utils/nms/; python3 build.py build_ext --inplace
+  `cd model/utils/nms/; python3 build.py build_ext --inplace''')
+/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/matplotlib/font_manager.py:280: UserWarning: Matplotlib is building the font cache using fc-list. This may take a moment.
+  'Matplotlib is building the font cache using fc-list. '
+/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/matplotlib/__init__.py:1401: UserWarning:  This call to matplotlib.use() has no effect
+because the backend has already been chosen;
+matplotlib.use() must be called *before* pylab, matplotlib.pyplot,
+or matplotlib.backends is imported for the first time.
+
+  warnings.warn(_use_error_msg)
+sent wakeup
+Traceback (most recent call last):
+  File "fl_client.py", line 266, in <module>
+    FederatedClient("127.0.0.1", opt.port, opt.config_file, opt.gpu, opt.ignore_load)
+  File "fl_client.py", line 96, in __init__
+    self.sio.wait()
+  File "/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/socketIO_client/__init__.py", line 251, in wait
+    self._process_packets()
+  File "/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/socketIO_client/__init__.py", line 278, in _process_packets
+    self._process_packet(engineIO_packet)
+  File "/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/socketIO_client/__init__.py", line 491, in _process_packet
+    delegate(parse_socketIO_packet_data(socketIO_packet_data), namespace)
+  File "/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/socketIO_client/__init__.py", line 513, in _on_event
+    namespace._find_packet_callback(event)(*args)
+TypeError: on_init() missing 1 required positional argument: 'request'
+disconnect
+/home/mengu/FL/detection_benchmark/model/utils/nms/non_maximum_suppression.py:12: UserWarning: 
+    the python code for non_maximum_suppression is about 2x slow
+    It is strongly recommended to build cython code: 
+    `cd model/utils/nms/; python3 build.py build_ext --inplace
+  `cd model/utils/nms/; python3 build.py build_ext --inplace''')
+/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/matplotlib/font_manager.py:280: UserWarning: Matplotlib is building the font cache using fc-list. This may take a moment.
+  'Matplotlib is building the font cache using fc-list. '
+/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/matplotlib/__init__.py:1401: UserWarning:  This call to matplotlib.use() has no effect
+because the backend has already been chosen;
+matplotlib.use() must be called *before* pylab, matplotlib.pyplot,
+or matplotlib.backends is imported for the first time.
+
+  warnings.warn(_use_error_msg)
+sent wakeup
+Traceback (most recent call last):
+  File "fl_client.py", line 266, in <module>
+    FederatedClient("127.0.0.1", opt.port, opt.config_file, opt.gpu, opt.ignore_load)
+  File "fl_client.py", line 96, in __init__
+    self.sio.wait()
+  File "/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/socketIO_client/__init__.py", line 251, in wait
+    self._process_packets()
+  File "/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/socketIO_client/__init__.py", line 278, in _process_packets
+    self._process_packet(engineIO_packet)
+  File "/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/socketIO_client/__init__.py", line 491, in _process_packet
+    delegate(parse_socketIO_packet_data(socketIO_packet_data), namespace)
+  File "/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/socketIO_client/__init__.py", line 513, in _on_event
+    namespace._find_packet_callback(event)(*args)
+TypeError: on_init() missing 1 required positional argument: 'request'
+/home/mengu/FL/detection_benchmark/model/utils/nms/non_maximum_suppression.py:12: UserWarning: 
+    the python code for non_maximum_suppression is about 2x slow
+    It is strongly recommended to build cython code: 
+    `cd model/utils/nms/; python3 build.py build_ext --inplace
+  `cd model/utils/nms/; python3 build.py build_ext --inplace''')
+/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/matplotlib/font_manager.py:280: UserWarning: Matplotlib is building the font cache using fc-list. This may take a moment.
+  'Matplotlib is building the font cache using fc-list. '
+/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/matplotlib/__init__.py:1401: UserWarning:  This call to matplotlib.use() has no effect
+because the backend has already been chosen;
+matplotlib.use() must be called *before* pylab, matplotlib.pyplot,
+or matplotlib.backends is imported for the first time.
+
+  warnings.warn(_use_error_msg)
+sent wakeup
+Traceback (most recent call last):
+  File "fl_client.py", line 266, in <module>
+    FederatedClient("127.0.0.1", opt.port, opt.config_file, opt.gpu, opt.ignore_load)
+  File "fl_client.py", line 96, in __init__
+    self.sio.wait()
+  File "/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/socketIO_client/__init__.py", line 251, in wait
+    self._process_packets()
+  File "/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/socketIO_client/__init__.py", line 278, in _process_packets
+    self._process_packet(engineIO_packet)
+  File "/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/socketIO_client/__init__.py", line 491, in _process_packet
+    delegate(parse_socketIO_packet_data(socketIO_packet_data), namespace)
+  File "/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/socketIO_client/__init__.py", line 513, in _on_event
+    namespace._find_packet_callback(event)(*args)
+TypeError: on_init() missing 1 required positional argument: 'request'
+disconnect
+disconnect
+Namespace(config_file='data/task_configs/yolo/street_5/yolo_task3.json', gpu=3, ignore_load='True', port=1234)
+client run on 3
+{'model_name': 'Yolo', 'model_config': 'data/task_configs/yolo/street_5/yolo_model.json', 'log_filename': 'yolo/street_5/FL_client_3_log', 'train': 'data/street_5/3/train.txt', 'test': 'data/street_5/3/test.txt', 'names': 'data/street_5/classes.names', 'n_cpu': 4, 'local_epoch': 5, 'batch_size': 1}
+INFO:client:{'model_name': 'Yolo', 'model_config': 'data/task_configs/yolo/street_5/yolo_model.json', 'log_filename': 'yolo/street_5/FL_client_3_log', 'train': 'data/street_5/3/train.txt', 'test': 'data/street_5/3/test.txt', 'names': 'data/street_5/classes.names', 'n_cpu': 4, 'local_epoch': 5, 'batch_size': 1}
+sent wakeup
+on init
+{'model_def': 'config/yolov3-custom-street.cfg', 'pretrained_weights': 'weights/darknet53.conv.74', 'multiscale_training': True, 'gradient_accumulations': 2, 'img_size': 416}
+INFO:root:load data
+Namespace(config_file='data/task_configs/yolo/street_5/yolo_task1.json', gpu=1, ignore_load='True', port=1234)
+client run on 1
+{'model_name': 'Yolo', 'model_config': 'data/task_configs/yolo/street_5/yolo_model.json', 'log_filename': 'yolo/street_5/FL_client_1_log', 'train': 'data/street_5/1/train.txt', 'test': 'data/street_5/1/test.txt', 'names': 'data/street_5/classes.names', 'n_cpu': 4, 'local_epoch': 5, 'batch_size': 1}
+INFO:client:{'model_name': 'Yolo', 'model_config': 'data/task_configs/yolo/street_5/yolo_model.json', 'log_filename': 'yolo/street_5/FL_client_1_log', 'train': 'data/street_5/1/train.txt', 'test': 'data/street_5/1/test.txt', 'names': 'data/street_5/classes.names', 'n_cpu': 4, 'local_epoch': 5, 'batch_size': 1}
+Namespace(config_file='data/task_configs/yolo/street_5/yolo_task4.json', gpu=4, ignore_load='True', port=1234)
+client run on 4
+{'model_name': 'Yolo', 'model_config': 'data/task_configs/yolo/street_5/yolo_model.json', 'log_filename': 'yolo/street_5/FL_client_4_log', 'train': 'data/street_5/4/train.txt', 'test': 'data/street_5/4/test.txt', 'names': 'data/street_5/classes.names', 'n_cpu': 4, 'local_epoch': 5, 'batch_size': 1}
+INFO:client:{'model_name': 'Yolo', 'model_config': 'data/task_configs/yolo/street_5/yolo_model.json', 'log_filename': 'yolo/street_5/FL_client_4_log', 'train': 'data/street_5/4/train.txt', 'test': 'data/street_5/4/test.txt', 'names': 'data/street_5/classes.names', 'n_cpu': 4, 'local_epoch': 5, 'batch_size': 1}
+sent wakeup
+on init
+{'model_def': 'config/yolov3-custom-street.cfg', 'pretrained_weights': 'weights/darknet53.conv.74', 'multiscale_training': True, 'gradient_accumulations': 2, 'img_size': 416}
+INFO:root:load data
+Namespace(config_file='data/task_configs/yolo/street_5/yolo_task5.json', gpu=5, ignore_load='True', port=1234)
+client run on 5
+{'model_name': 'Yolo', 'model_config': 'data/task_configs/yolo/street_5/yolo_model.json', 'log_filename': 'yolo/street_5/FL_client_5_log', 'train': 'data/street_5/5/train.txt', 'test': 'data/street_5/5/test.txt', 'names': 'data/street_5/classes.names', 'n_cpu': 4, 'local_epoch': 5, 'batch_size': 1}
+INFO:client:{'model_name': 'Yolo', 'model_config': 'data/task_configs/yolo/street_5/yolo_model.json', 'log_filename': 'yolo/street_5/FL_client_5_log', 'train': 'data/street_5/5/train.txt', 'test': 'data/street_5/5/test.txt', 'names': 'data/street_5/classes.names', 'n_cpu': 4, 'local_epoch': 5, 'batch_size': 1}
+sent wakeup
+on init
+{'model_def': 'config/yolov3-custom-street.cfg', 'pretrained_weights': 'weights/darknet53.conv.74', 'multiscale_training': True, 'gradient_accumulations': 2, 'img_size': 416}
+INFO:root:load data
+sent wakeup
+on init
+{'model_def': 'config/yolov3-custom-street.cfg', 'pretrained_weights': 'weights/darknet53.conv.74', 'multiscale_training': True, 'gradient_accumulations': 2, 'img_size': 416}
+INFO:root:load data
+Namespace(config_file='data/task_configs/yolo/street_5/yolo_task2.json', gpu=2, ignore_load='True', port=1234)
+client run on 2
+{'model_name': 'Yolo', 'model_config': 'data/task_configs/yolo/street_5/yolo_model.json', 'log_filename': 'yolo/street_5/FL_client_2_log', 'train': 'data/street_5/2/train.txt', 'test': 'data/street_5/2/test.txt', 'names': 'data/street_5/classes.names', 'n_cpu': 4, 'local_epoch': 5, 'batch_size': 1}
+INFO:client:{'model_name': 'Yolo', 'model_config': 'data/task_configs/yolo/street_5/yolo_model.json', 'log_filename': 'yolo/street_5/FL_client_2_log', 'train': 'data/street_5/2/train.txt', 'test': 'data/street_5/2/test.txt', 'names': 'data/street_5/classes.names', 'n_cpu': 4, 'local_epoch': 5, 'batch_size': 1}
+sent wakeup
+on init
+{'model_def': 'config/yolov3-custom-street.cfg', 'pretrained_weights': 'weights/darknet53.conv.74', 'multiscale_training': True, 'gradient_accumulations': 2, 'img_size': 416}
+INFO:root:load data
+train_size: 50
+config/yolov3-custom-street.cfg
+INFO:root:model construct completed
+train_size: 37
+config/yolov3-custom-street.cfg
+INFO:root:model construct completed
+train_size: 122
+config/yolov3-custom-street.cfg
+INFO:root:model construct completed
+train_size: 344
+config/yolov3-custom-street.cfg
+INFO:root:model construct completed
+train_size: 212
+config/yolov3-custom-street.cfg
+INFO:root:model construct completed
+local model initialized done.
+check client resource.
+Ignore load average
+update requested
+INFO:client:### Round 0 ###
+INFO:client:received initial model
+local model initialized done.
+check client resource.
+Ignore load average
+update requested
+INFO:client:### Round 0 ###
+local model initialized done.
+check client resource.
+Ignore load average
+update requested
+INFO:client:### Round 0 ###
+INFO:client:received initial model
+INFO:client:received initial model
+local model initialized done.
+check client resource.
+Ignore load average
+update requested
+INFO:client:### Round 0 ###
+INFO:client:received initial model
+local model initialized done.
+check client resource.
+Ignore load average
+update requested
+INFO:client:### Round 0 ###
+INFO:client:received initial model
+THCudaCheck FAIL file=/pytorch/aten/src/THC/THCGeneral.cpp line=74 error=38 : no CUDA-capable device is detected
+THCudaCheck FAIL file=/pytorch/aten/src/THC/THCGeneral.cpp line=74 error=38 : no CUDA-capable device is detected
+THCudaCheck FAIL file=/pytorch/aten/src/THC/THCGeneral.cpp line=74 error=38 : no CUDA-capable device is detected
+THCudaCheck FAIL file=/pytorch/aten/src/THC/THCGeneral.cpp line=74 error=38 : no CUDA-capable device is detected
+yolo_model.pkl
+load model from file
+/home/mengu/FL/detection_benchmark/model/utils/nms/non_maximum_suppression.py:12: UserWarning: 
+    the python code for non_maximum_suppression is about 2x slow
+    It is strongly recommended to build cython code: 
+    `cd model/utils/nms/; python3 build.py build_ext --inplace
+  `cd model/utils/nms/; python3 build.py build_ext --inplace''')
+/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/matplotlib/__init__.py:1401: UserWarning:  This call to matplotlib.use() has no effect
+because the backend has already been chosen;
+matplotlib.use() must be called *before* pylab, matplotlib.pyplot,
+or matplotlib.backends is imported for the first time.
+
+  warnings.warn(_use_error_msg)
+/home/mengu/FL/detection_benchmark/model/utils/nms/non_maximum_suppression.py:12: UserWarning: 
+    the python code for non_maximum_suppression is about 2x slow
+    It is strongly recommended to build cython code: 
+    `cd model/utils/nms/; python3 build.py build_ext --inplace
+  `cd model/utils/nms/; python3 build.py build_ext --inplace''')
+/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/matplotlib/__init__.py:1401: UserWarning:  This call to matplotlib.use() has no effect
+because the backend has already been chosen;
+matplotlib.use() must be called *before* pylab, matplotlib.pyplot,
+or matplotlib.backends is imported for the first time.
+
+  warnings.warn(_use_error_msg)
+/home/mengu/FL/detection_benchmark/model/utils/nms/non_maximum_suppression.py:12: UserWarning: 
+    the python code for non_maximum_suppression is about 2x slow
+    It is strongly recommended to build cython code: 
+    `cd model/utils/nms/; python3 build.py build_ext --inplace
+  `cd model/utils/nms/; python3 build.py build_ext --inplace''')
+/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/matplotlib/__init__.py:1401: UserWarning:  This call to matplotlib.use() has no effect
+because the backend has already been chosen;
+matplotlib.use() must be called *before* pylab, matplotlib.pyplot,
+or matplotlib.backends is imported for the first time.
+
+  warnings.warn(_use_error_msg)
+/home/mengu/FL/detection_benchmark/model/utils/nms/non_maximum_suppression.py:12: UserWarning: 
+    the python code for non_maximum_suppression is about 2x slow
+    It is strongly recommended to build cython code: 
+    `cd model/utils/nms/; python3 build.py build_ext --inplace
+  `cd model/utils/nms/; python3 build.py build_ext --inplace''')
+/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/matplotlib/__init__.py:1401: UserWarning:  This call to matplotlib.use() has no effect
+because the backend has already been chosen;
+matplotlib.use() must be called *before* pylab, matplotlib.pyplot,
+or matplotlib.backends is imported for the first time.
+
+  warnings.warn(_use_error_msg)
+yolo_model.pkl
+load model from file
+yolo_model.pkl
+load model from file
+yolo_model.pkl
+load model from file
+/home/mengu/FL/detection_benchmark/model/utils/nms/non_maximum_suppression.py:12: UserWarning: 
+    the python code for non_maximum_suppression is about 2x slow
+    It is strongly recommended to build cython code: 
+    `cd model/utils/nms/; python3 build.py build_ext --inplace
+  `cd model/utils/nms/; python3 build.py build_ext --inplace''')
+/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/matplotlib/__init__.py:1401: UserWarning:  This call to matplotlib.use() has no effect
+because the backend has already been chosen;
+matplotlib.use() must be called *before* pylab, matplotlib.pyplot,
+or matplotlib.backends is imported for the first time.
+
+  warnings.warn(_use_error_msg)
+yolo_model.pkl
+load model from file
+Traceback (most recent call last):
+  File "fl_client.py", line 266, in <module>
+    FederatedClient("127.0.0.1", opt.port, opt.config_file, opt.gpu, opt.ignore_load)
+  File "fl_client.py", line 96, in __init__
+    self.sio.wait()
+  File "/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/socketIO_client/__init__.py", line 251, in wait
+    self._process_packets()
+  File "/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/socketIO_client/__init__.py", line 278, in _process_packets
+    self._process_packet(engineIO_packet)
+  File "/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/socketIO_client/__init__.py", line 491, in _process_packet
+    delegate(parse_socketIO_packet_data(socketIO_packet_data), namespace)
+  File "/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/socketIO_client/__init__.py", line 513, in _on_event
+    namespace._find_packet_callback(event)(*args)
+  File "fl_client.py", line 140, in on_request_update
+    self.local_model.set_weights(weights)
+  File "fl_client.py", line 42, in set_weights
+    self.model.set_weights(new_weights)
+  File "/home/mengu/FL/detection_benchmark/model/model_wrapper.py", line 79, in set_weights
+    param_ = torch.from_numpy(parameters[i]).cuda()
+RuntimeError: cuda runtime error (38) : no CUDA-capable device is detected at /pytorch/aten/src/THC/THCGeneral.cpp:74
+Traceback (most recent call last):
+  File "fl_client.py", line 266, in <module>
+    FederatedClient("127.0.0.1", opt.port, opt.config_file, opt.gpu, opt.ignore_load)
+  File "fl_client.py", line 96, in __init__
+    self.sio.wait()
+  File "/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/socketIO_client/__init__.py", line 251, in wait
+    self._process_packets()
+  File "/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/socketIO_client/__init__.py", line 278, in _process_packets
+    self._process_packet(engineIO_packet)
+  File "/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/socketIO_client/__init__.py", line 491, in _process_packet
+    delegate(parse_socketIO_packet_data(socketIO_packet_data), namespace)
+  File "/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/socketIO_client/__init__.py", line 513, in _on_event
+    namespace._find_packet_callback(event)(*args)
+  File "fl_client.py", line 140, in on_request_update
+    self.local_model.set_weights(weights)
+  File "fl_client.py", line 42, in set_weights
+    self.model.set_weights(new_weights)
+  File "/home/mengu/FL/detection_benchmark/model/model_wrapper.py", line 79, in set_weights
+    param_ = torch.from_numpy(parameters[i]).cuda()
+RuntimeError: cuda runtime error (38) : no CUDA-capable device is detected at /pytorch/aten/src/THC/THCGeneral.cpp:74
+Traceback (most recent call last):
+  File "fl_client.py", line 266, in <module>
+    FederatedClient("127.0.0.1", opt.port, opt.config_file, opt.gpu, opt.ignore_load)
+  File "fl_client.py", line 96, in __init__
+    self.sio.wait()
+  File "/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/socketIO_client/__init__.py", line 251, in wait
+    self._process_packets()
+  File "/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/socketIO_client/__init__.py", line 278, in _process_packets
+    self._process_packet(engineIO_packet)
+  File "/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/socketIO_client/__init__.py", line 491, in _process_packet
+    delegate(parse_socketIO_packet_data(socketIO_packet_data), namespace)
+  File "/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/socketIO_client/__init__.py", line 513, in _on_event
+    namespace._find_packet_callback(event)(*args)
+  File "fl_client.py", line 140, in on_request_update
+    self.local_model.set_weights(weights)
+  File "fl_client.py", line 42, in set_weights
+    self.model.set_weights(new_weights)
+  File "/home/mengu/FL/detection_benchmark/model/model_wrapper.py", line 79, in set_weights
+    param_ = torch.from_numpy(parameters[i]).cuda()
+RuntimeError: cuda runtime error (38) : no CUDA-capable device is detected at /pytorch/aten/src/THC/THCGeneral.cpp:74
+Traceback (most recent call last):
+  File "fl_client.py", line 266, in <module>
+    FederatedClient("127.0.0.1", opt.port, opt.config_file, opt.gpu, opt.ignore_load)
+  File "fl_client.py", line 96, in __init__
+    self.sio.wait()
+  File "/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/socketIO_client/__init__.py", line 251, in wait
+    self._process_packets()
+  File "/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/socketIO_client/__init__.py", line 278, in _process_packets
+    self._process_packet(engineIO_packet)
+  File "/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/socketIO_client/__init__.py", line 491, in _process_packet
+    delegate(parse_socketIO_packet_data(socketIO_packet_data), namespace)
+  File "/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/socketIO_client/__init__.py", line 513, in _on_event
+    namespace._find_packet_callback(event)(*args)
+  File "fl_client.py", line 140, in on_request_update
+    self.local_model.set_weights(weights)
+  File "fl_client.py", line 42, in set_weights
+    self.model.set_weights(new_weights)
+  File "/home/mengu/FL/detection_benchmark/model/model_wrapper.py", line 79, in set_weights
+    param_ = torch.from_numpy(parameters[i]).cuda()
+RuntimeError: cuda runtime error (38) : no CUDA-capable device is detected at /pytorch/aten/src/THC/THCGeneral.cpp:74
+Traceback (most recent call last):
+  File "fl_client.py", line 266, in <module>
+    FederatedClient("127.0.0.1", opt.port, opt.config_file, opt.gpu, opt.ignore_load)
+  File "fl_client.py", line 96, in __init__
+    self.sio.wait()
+  File "/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/socketIO_client/__init__.py", line 251, in wait
+    self._process_packets()
+  File "/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/socketIO_client/__init__.py", line 278, in _process_packets
+    self._process_packet(engineIO_packet)
+  File "/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/socketIO_client/__init__.py", line 491, in _process_packet
+    delegate(parse_socketIO_packet_data(socketIO_packet_data), namespace)
+  File "/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/socketIO_client/__init__.py", line 513, in _on_event
+    namespace._find_packet_callback(event)(*args)
+  File "fl_client.py", line 142, in on_request_update
+    my_weights, train_loss = self.local_model.train_one_round()
+  File "fl_client.py", line 47, in train_one_round
+    loss = self.model.train_one_epoch()
+  File "/home/mengu/FL/detection_benchmark/model/model_wrapper.py", line 89, in train_one_epoch
+    for batch_i, (_, imgs, targets) in enumerate(self.dataloader):
+  File "/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 336, in __next__
+    return self._process_next_batch(batch)
+  File "/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 357, in _process_next_batch
+    raise batch.exc_type(batch.exc_msg)
+TypeError: Traceback (most recent call last):
+  File "/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 106, in _worker_loop
+    samples = collate_fn([dataset[i] for i in batch_indices])
+  File "/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 106, in <listcomp>
+    samples = collate_fn([dataset[i] for i in batch_indices])
+  File "/home/mengu/FL/detection_benchmark/utils/datasets.py", line 96, in __getitem__
+    img, pad = pad_to_square(img, 0)
+  File "/home/mengu/FL/detection_benchmark/utils/datasets.py", line 23, in pad_to_square
+    img = F.pad(img, pad, "constant", value=pad_value)
+  File "/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/torch/nn/functional.py", line 2159, in pad
+    return ConstantPadNd.apply(input, pad, value)
+  File "/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/torch/nn/_functions/padding.py", line 40, in forward
+    c_output = c_output.narrow(i, p[0], c_output.size(i) - p[0])
+TypeError: narrow(): argument 'start' (position 2) must be int, not numpy.int64
+
+disconnect
+disconnect
+disconnect
+disconnect
+disconnect
+/home/mengu/FL/detection_benchmark/model/utils/nms/non_maximum_suppression.py:12: UserWarning: 
+    the python code for non_maximum_suppression is about 2x slow
+    It is strongly recommended to build cython code: 
+    `cd model/utils/nms/; python3 build.py build_ext --inplace
+  `cd model/utils/nms/; python3 build.py build_ext --inplace''')
+/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/matplotlib/__init__.py:1401: UserWarning:  This call to matplotlib.use() has no effect
+because the backend has already been chosen;
+matplotlib.use() must be called *before* pylab, matplotlib.pyplot,
+or matplotlib.backends is imported for the first time.
+
+  warnings.warn(_use_error_msg)
+/home/mengu/FL/detection_benchmark/model/utils/nms/non_maximum_suppression.py:12: UserWarning: 
+    the python code for non_maximum_suppression is about 2x slow
+    It is strongly recommended to build cython code: 
+    `cd model/utils/nms/; python3 build.py build_ext --inplace
+  `cd model/utils/nms/; python3 build.py build_ext --inplace''')
+/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/matplotlib/__init__.py:1401: UserWarning:  This call to matplotlib.use() has no effect
+because the backend has already been chosen;
+matplotlib.use() must be called *before* pylab, matplotlib.pyplot,
+or matplotlib.backends is imported for the first time.
+
+  warnings.warn(_use_error_msg)
+/home/mengu/FL/detection_benchmark/model/utils/nms/non_maximum_suppression.py:12: UserWarning: 
+    the python code for non_maximum_suppression is about 2x slow
+    It is strongly recommended to build cython code: 
+    `cd model/utils/nms/; python3 build.py build_ext --inplace
+  `cd model/utils/nms/; python3 build.py build_ext --inplace''')
+/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/matplotlib/__init__.py:1401: UserWarning:  This call to matplotlib.use() has no effect
+because the backend has already been chosen;
+matplotlib.use() must be called *before* pylab, matplotlib.pyplot,
+or matplotlib.backends is imported for the first time.
+
+  warnings.warn(_use_error_msg)
+/home/mengu/FL/detection_benchmark/model/utils/nms/non_maximum_suppression.py:12: UserWarning: 
+    the python code for non_maximum_suppression is about 2x slow
+    It is strongly recommended to build cython code: 
+    `cd model/utils/nms/; python3 build.py build_ext --inplace
+  `cd model/utils/nms/; python3 build.py build_ext --inplace''')
+/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/matplotlib/__init__.py:1401: UserWarning:  This call to matplotlib.use() has no effect
+because the backend has already been chosen;
+matplotlib.use() must be called *before* pylab, matplotlib.pyplot,
+or matplotlib.backends is imported for the first time.
+
+  warnings.warn(_use_error_msg)
+/home/mengu/FL/detection_benchmark/model/utils/nms/non_maximum_suppression.py:12: UserWarning: 
+    the python code for non_maximum_suppression is about 2x slow
+    It is strongly recommended to build cython code: 
+    `cd model/utils/nms/; python3 build.py build_ext --inplace
+  `cd model/utils/nms/; python3 build.py build_ext --inplace''')
+/home/mengu/anaconda3/envs/pytorch/lib/python3.6/site-packages/matplotlib/__init__.py:1401: UserWarning:  This call to matplotlib.use() has no effect
+because the backend has already been chosen;
+matplotlib.use() must be called *before* pylab, matplotlib.pyplot,
+or matplotlib.backends is imported for the first time.
+
+  warnings.warn(_use_error_msg)
+Traceback (most recent call last):
+  File "fl_client.py", line 19, in <module>
+    raise FileNotFoundError("{} not found".format(log_dir))
+FileNotFoundError: experiments/logs/0602 not found
+Traceback (most recent call last):
+  File "fl_client.py", line 19, in <module>
+    raise FileNotFoundError("{} not found".format(log_dir))
+FileNotFoundError: experiments/logs/0602 not found
+Traceback (most recent call last):
+  File "fl_client.py", line 19, in <module>
+    raise FileNotFoundError("{} not found".format(log_dir))
+FileNotFoundError: experiments/logs/0602 not found
+Traceback (most recent call last):
+  File "fl_client.py", line 19, in <module>
+    raise FileNotFoundError("{} not found".format(log_dir))
+FileNotFoundError: experiments/logs/0602 not found
+Traceback (most recent call last):
+  File "fl_client.py", line 19, in <module>
+    raise FileNotFoundError("{} not found".format(log_dir))
+FileNotFoundError: experiments/logs/0602 not found
+Namespace(config_file='data/task_configs/yolo/street_5/yolo_task5.json', gpu=5, ignore_load='True', port=1234)
+client run on 5
+{'model_name': 'Yolo', 'model_config': 'data/task_configs/yolo/street_5/yolo_model.json', 'log_filename': 'yolo/street_5/FL_client_5_log', 'train': 'data/street_5/5/train.txt', 'test': 'data/street_5/5/test.txt', 'names': 'data/street_5/classes.names', 'n_cpu': 4, 'local_epoch': 5, 'batch_size': 1}
+INFO:client:{'model_name': 'Yolo', 'model_config': 'data/task_configs/yolo/street_5/yolo_model.json', 'log_filename': 'yolo/street_5/FL_client_5_log', 'train': 'data/street_5/5/train.txt', 'test': 'data/street_5/5/test.txt', 'names': 'data/street_5/classes.names', 'n_cpu': 4, 'local_epoch': 5, 'batch_size': 1}
+Namespace(config_file='data/task_configs/yolo/street_5/yolo_task4.json', gpu=4, ignore_load='True', port=1234)
+client run on 4
+{'model_name': 'Yolo', 'model_config': 'data/task_configs/yolo/street_5/yolo_model.json', 'log_filename': 'yolo/street_5/FL_client_4_log', 'train': 'data/street_5/4/train.txt', 'test': 'data/street_5/4/test.txt', 'names': 'data/street_5/classes.names', 'n_cpu': 4, 'local_epoch': 5, 'batch_size': 1}
+INFO:client:{'model_name': 'Yolo', 'model_config': 'data/task_configs/yolo/street_5/yolo_model.json', 'log_filename': 'yolo/street_5/FL_client_4_log', 'train': 'data/street_5/4/train.txt', 'test': 'data/street_5/4/test.txt', 'names': 'data/street_5/classes.names', 'n_cpu': 4, 'local_epoch': 5, 'batch_size': 1}
+Namespace(config_file='data/task_configs/yolo/street_5/yolo_task2.json', gpu=2, ignore_load='True', port=1234)
+client run on 2
+{'model_name': 'Yolo', 'model_config': 'data/task_configs/yolo/street_5/yolo_model.json', 'log_filename': 'yolo/street_5/FL_client_2_log', 'train': 'data/street_5/2/train.txt', 'test': 'data/street_5/2/test.txt', 'names': 'data/street_5/classes.names', 'n_cpu': 4, 'local_epoch': 5, 'batch_size': 1}
+INFO:client:{'model_name': 'Yolo', 'model_config': 'data/task_configs/yolo/street_5/yolo_model.json', 'log_filename': 'yolo/street_5/FL_client_2_log', 'train': 'data/street_5/2/train.txt', 'test': 'data/street_5/2/test.txt', 'names': 'data/street_5/classes.names', 'n_cpu': 4, 'local_epoch': 5, 'batch_size': 1}
+Namespace(config_file='data/task_configs/yolo/street_5/yolo_task3.json', gpu=3, ignore_load='True', port=1234)
+client run on 3
+{'model_name': 'Yolo', 'model_config': 'data/task_configs/yolo/street_5/yolo_model.json', 'log_filename': 'yolo/street_5/FL_client_3_log', 'train': 'data/street_5/3/train.txt', 'test': 'data/street_5/3/test.txt', 'names': 'data/street_5/classes.names', 'n_cpu': 4, 'local_epoch': 5, 'batch_size': 1}
+INFO:client:{'model_name': 'Yolo', 'model_config': 'data/task_configs/yolo/street_5/yolo_model.json', 'log_filename': 'yolo/street_5/FL_client_3_log', 'train': 'data/street_5/3/train.txt', 'test': 'data/street_5/3/test.txt', 'names': 'data/street_5/classes.names', 'n_cpu': 4, 'local_epoch': 5, 'batch_size': 1}
+Namespace(config_file='data/task_configs/yolo/street_5/yolo_task1.json', gpu=1, ignore_load='True', port=1234)
+client run on 1
+{'model_name': 'Yolo', 'model_config': 'data/task_configs/yolo/street_5/yolo_model.json', 'log_filename': 'yolo/street_5/FL_client_1_log', 'train': 'data/street_5/1/train.txt', 'test': 'data/street_5/1/test.txt', 'names': 'data/street_5/classes.names', 'n_cpu': 4, 'local_epoch': 5, 'batch_size': 1}
+INFO:client:{'model_name': 'Yolo', 'model_config': 'data/task_configs/yolo/street_5/yolo_model.json', 'log_filename': 'yolo/street_5/FL_client_1_log', 'train': 'data/street_5/1/train.txt', 'test': 'data/street_5/1/test.txt', 'names': 'data/street_5/classes.names', 'n_cpu': 4, 'local_epoch': 5, 'batch_size': 1}
+sent wakeup
+on init
+{'model_def': 'config/yolov3-custom-street.cfg', 'pretrained_weights': 'weights/darknet53.conv.74', 'multiscale_training': True, 'gradient_accumulations': 2, 'img_size': 416}
+INFO:root:load data
+sent wakeup
+on init
+{'model_def': 'config/yolov3-custom-street.cfg', 'pretrained_weights': 'weights/darknet53.conv.74', 'multiscale_training': True, 'gradient_accumulations': 2, 'img_size': 416}
+INFO:root:load data
+sent wakeup
+on init
+{'model_def': 'config/yolov3-custom-street.cfg', 'pretrained_weights': 'weights/darknet53.conv.74', 'multiscale_training': True, 'gradient_accumulations': 2, 'img_size': 416}
+INFO:root:load data
+sent wakeup
+on init
+{'model_def': 'config/yolov3-custom-street.cfg', 'pretrained_weights': 'weights/darknet53.conv.74', 'multiscale_training': True, 'gradient_accumulations': 2, 'img_size': 416}
+INFO:root:load data
+sent wakeup
+on init
+{'model_def': 'config/yolov3-custom-street.cfg', 'pretrained_weights': 'weights/darknet53.conv.74', 'multiscale_training': True, 'gradient_accumulations': 2, 'img_size': 416}
+INFO:root:load data
+train_size: 122
+config/yolov3-custom-street.cfg
+INFO:root:model construct completed
+train_size: 50
+config/yolov3-custom-street.cfg
+INFO:root:model construct completed
+train_size: 344
+config/yolov3-custom-street.cfg
+INFO:root:model construct completed
+train_size: 37
+config/yolov3-custom-street.cfg
+INFO:root:model construct completed
+train_size: 212
+config/yolov3-custom-street.cfg
+INFO:root:model construct completed

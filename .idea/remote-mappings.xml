@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RemoteMappingsManager">
+    <list>
+      <list>
+        <remote-mappings server-id="python@ssh://chenmq@172.18.233.41:10001/home/chenmq/anaconda3/envs/Pytorch/bin/python" />
+      </list>
+    </list>
+  </component>
+</project>

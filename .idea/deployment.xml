@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="1080-Ti" createEmptyFolders="true" showNewOnTargetInSync="false">
+    <serverData>
+      <paths name="1080-Ti">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/detection_benchmark" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="2070Ti_01">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/detection_benchmark" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="Copy of project-level server '2070Ti_01'">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/detection_benchmark" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

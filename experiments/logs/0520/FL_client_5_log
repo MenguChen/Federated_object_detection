@@ -1,0 +1,4 @@
+2020-05-20 18:19:59,262 - client - INFO - {'model_name': 'Yolo', 'model_config': 'data/task_configs/yolo/street_5/yolo_model.json', 'log_filename': 'yolo/street_5/FL_client_5_log', 'train': 'data/street_5/5/train.txt', 'test': 'data/street_5/5/test.txt', 'names': 'data/street_5/classes.names', 'n_cpu': 4, 'local_epoch': 5, 'batch_size': 1}
+2020-05-20 18:37:58,249 - client - INFO - {'model_name': 'Yolo', 'model_config': 'data/task_configs/yolo/street_5/yolo_model.json', 'log_filename': 'yolo/street_5/FL_client_5_log', 'train': 'data/street_5/5/train.txt', 'test': 'data/street_5/5/test.txt', 'names': 'data/street_5/classes.names', 'n_cpu': 4, 'local_epoch': 5, 'batch_size': 1}
+2020-05-20 18:38:01,387 - client - INFO - ### Round 0 ###
+2020-05-20 18:38:01,387 - client - INFO - received initial model

@@ -1,0 +1,11 @@
+{
+    "model_name": "Yolo",
+    "model_config": "data/task_configs/yolo/street_5/yolo_model.json",
+    "log_filename": "yolo/street_5/FL_client_3_log",
+    "train": "data/street_5/3/train.txt",
+    "test": "data/street_5/3/test.txt",
+    "names": "data/street_5/classes.names",
+    "n_cpu": 4,
+    "local_epoch": 5,
+    "batch_size": 1
+}

@@ -1,0 +1,7 @@
+{
+    "model_def": "config/yolov3-custom-street.cfg",
+    "pretrained_weights": "weights/darknet53.conv.74",
+    "multiscale_training": true,
+    "gradient_accumulations": 2,
+    "img_size": 416
+}
