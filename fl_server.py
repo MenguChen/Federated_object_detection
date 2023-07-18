@@ -29,12 +29,13 @@ class Aggregator(object):
         self.task_config = task_config
         self.model_name = task_config['model_name']
         self.logger = logger
+        self.logger.info("Aggregator init")
         self.logger.info(self.get_model_description())
- 
+
         self.current_weights = self.get_init_parameters()
         self.model_path = task_config['model_path']
         # weights should be a ordered list of parameter
-       # for stats
+        # for stats
         self.train_losses = []
         self.avg_test_losses = []
         self.avg_test_maps = []
@@ -59,6 +60,7 @@ class Aggregator(object):
 
     # client_updates = [(w, n)..]
     def update_weights(self, client_weights, client_sizes):
+        self.logger.info("(jacob) update_weights")
         total_size = np.sum(client_sizes)
         new_weights = [np.zeros(param.shape) for param in client_weights[0]]
         for c in range(len(client_weights)):
@@ -68,6 +70,7 @@ class Aggregator(object):
         self.current_weights = new_weights
 
     def aggregate_loss_map_recall(self, client_losses, client_maps, client_recalls, client_sizes):
+        self.logger.info("(jacob) aggregate_loss_map_recall")
         total_size = sum(client_sizes)
         # weighted sum
         aggr_loss = sum(client_losses[i] / total_size * client_sizes[i]
@@ -80,6 +83,7 @@ class Aggregator(object):
 
     # cur_round could None
     def aggregate_train_loss_accuracy_recall(self, client_losses, client_sizes, cur_round):
+        self.logger.info("(jacob) aggregate_train_loss_accuracy_recall")
         cur_time = int(round(time.time())) - self.training_start_time
         total_size = sum(client_sizes)
         # weighted sum
@@ -90,6 +94,7 @@ class Aggregator(object):
 
     # cur_round coule be None
     def aggregate_loss_accuracy_recall(self, client_losses, client_maps, client_recalls, client_sizes, cur_round):
+        self.logger.info("(jacob) aggregate_train_loss_accuracy_recall")
         cur_time = int(round(time.time())) - self.training_start_time
         aggr_loss, aggr_map, aggr_recall = self.aggregate_loss_map_recall(client_losses, client_maps, client_recalls,
                                                                           client_sizes)
@@ -100,6 +105,7 @@ class Aggregator(object):
         return aggr_loss, aggr_map, aggr_recall
 
     def get_stats(self):
+        self.logger.info("(Jacob) get_stats")
         return {
             "train_loss": self.train_losses,
             "valid_loss": self.valid_losses,
@@ -117,12 +123,13 @@ class Aggregator(object):
 
 class FLServer(object):
     def __init__(self, task_config_filename, host, port):
+        print("(Jacob) init FLServer")
         self.task_config = load_json(task_config_filename)
         self.ready_client_sids = set()
 
         self.app = Flask(__name__)
-        self.socketio = SocketIO(self.app, ping_timeout=3600000,
-                                 ping_interval=3600000,
+        self.socketio = SocketIO(self.app, ping_timeout=1200,
+                                 ping_interval=600,
                                  max_http_buffer_size=int(1e32))
         self.host = host
         self.port = port
@@ -135,6 +142,7 @@ class FLServer(object):
         self.ROUNDS_BETWEEN_VALIDATIONS = self.task_config["ROUNDS_BETWEEN_VALIDATIONS"]
 
         self.logger = logging.getLogger("aggregation")
+        self.logger.info("(Jacob) init FLServer")
         log_dir = os.path.join('experiments', 'logs', datestr, self.task_config['log_dir'])
         os.makedirs(log_dir, exist_ok=True)
         fh = logging.FileHandler(os.path.join(log_dir, '{}.log'.format(timestr)))
@@ -167,6 +175,7 @@ class FLServer(object):
 
         # socket io messages
         self.register_handles()
+        self.logger.info("(Jacob) Register handles completed")
         self.invalid_tolerate = 0
 
         @self.app.route('/')
@@ -182,25 +191,32 @@ class FLServer(object):
 
         @self.socketio.on('connect')
         def handle_connect():
+            self.logger.info("(Jacob) handle_connect")
             print(request.sid, "connected")
 
         @self.socketio.on('reconnect')
         def handle_reconnect():
+            self.logger.info("(Jacob) handle_reconnect")
             print(request.sid, "reconnected")
 
         @self.socketio.on('disconnect')
         def handle_disconnect():
+            self.logger.info("(Jacob) handle_disconnect")
             print(request.sid, "disconnected")
             if request.sid in self.ready_client_sids:
                 self.ready_client_sids.remove(request.sid)
 
         @self.socketio.on('client_wake_up')
         def handle_wake_up():
+            self.logger.info("(Jacob) handle_wake_up")
+            self.logger.info("(Jacob) WAKE UP MISTER WEST")
             print("client wake_up: ", request.sid)
+            # self.socketio.emit('init')
             emit('init')
 
         @self.socketio.on('client_ready')
         def handle_client_ready():
+            self.logger.info("(Jacob) handle_client_ready")
             print("client ready for training", request.sid)
             self.ready_client_sids.add(request.sid)
             if len(self.ready_client_sids) >= self.MIN_NUM_WORKERS and self.current_round == -1:
@@ -213,6 +229,7 @@ class FLServer(object):
 
         @self.socketio.on('check_client_resource_done')
         def handle_check_client_resource_done(data):
+            self.logger.info("handle_check_client_resource_done")
             if data['round_number'] == self.current_round:
                 self.client_resource[request.sid] = data['load_rate']
                 if len(self.client_resource) == self.NUM_CLIENTS_CONTACTED_PER_ROUND:
@@ -228,10 +245,12 @@ class FLServer(object):
                             print(client_id, "reject")
 
                     if satisfy / len(self.client_resource) > 0.5:
+                        self.logger.info("(Jacob) Satisfy accepted")
                         self.wait_time = min(self.wait_time, 3)
                         time.sleep(self.wait_time)
                         self.train_next_round(client_sids_selected)
                     else:
+                        self.logger.info("(Jacob) Satisfy rejected")
                         if self.wait_time < 10:
                             self.wait_time = self.wait_time + 1
                         time.sleep(self.wait_time)
@@ -239,6 +258,7 @@ class FLServer(object):
 
         @self.socketio.on('client_update')
         def handle_client_update(data):
+            self.logger.info("(Jacob) handle_client_update")
             self.logger.info("received client update of bytes: {}".format(sys.getsizeof(data)))
             self.logger.info("handle client_update {}".format(request.sid))
 
@@ -292,6 +312,7 @@ class FLServer(object):
 
         @self.socketio.on('client_eval')
         def handle_client_eval(data):
+            self.logger.info("(Jacob) handle_client_eval")
             if self.eval_client_updates is None:
                 return
             self.logger.info("handle client_eval {}".format(request.sid))
@@ -330,6 +351,7 @@ class FLServer(object):
                     self.check_client_resource()
 
     def check_client_resource(self):
+        self.logger.info("(Jacob) check_client_resource")
 
         self.client_resource = {}
         client_sids_selected = random.sample(list(self.ready_client_sids), self.NUM_CLIENTS_CONTACTED_PER_ROUND)
@@ -341,6 +363,7 @@ class FLServer(object):
 
     # Note: we assume that during training the #workers will be >= MIN_NUM_WORKERS
     def train_next_round(self, client_sids_selected):
+        self.logger.info("(Jacob) train_next_round")
         self.current_round += 1
         # buffers all client updates
         self.current_round_client_updates = []
@@ -368,6 +391,7 @@ class FLServer(object):
                 }, room=rid)
 
     def stop_and_eval(self):
+        self.logger.info("(Jacob) stop_and_eval")
         current_weights = obj_to_pickle_string(self.aggregator.current_weights, self.aggregator.model_path)
         self.eval_client_updates = []
         for rid in self.ready_client_sids:
@@ -380,7 +404,8 @@ class FLServer(object):
         self.logger.info("sent aggregated model to client")
 
     def start(self):
-        self.socketio.run(self.app, host=self.host, port=self.port)
+        self.logger.info("(Jacob) start")
+        self.socketio.run(self.app, host=self.host, port=self.port, debug=True)
 
 
 if __name__ == '__main__':

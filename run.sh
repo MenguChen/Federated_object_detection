@@ -27,10 +27,16 @@ if [ ! -n "$PORT" ];then
 	exit
 fi
 
+conda init
+source activate fedlearn
 for i in $(seq 1 ${NUM_CLIENT}); do
 	nohup python3 fl_client.py \
-	     --gpu $((($i % 8)))\
+	     --gpu $(($i - 1))\
 	     --config_file data/task_configs/${MODEL}/${DATASET}/${MODEL}_task$i.json \
 	     --ignore_load True \
 	     --port ${PORT} > ${MODEL}_task$i.log &
 done
+conda deactivate fedlearn
+
+
+read -p "Press enter to close this window"

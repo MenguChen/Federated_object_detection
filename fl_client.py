@@ -20,12 +20,14 @@ if not os.path.exists(log_dir):
 
 
 def load_json(filename):
+    print("(Jacob) load_json")
     with open(filename) as f:
         return json.load(f)
 
 
 class LocalModel(object):
     def __init__(self, task_config):
+        print("(Jacob) init LocalModel")
         """
         Inputs:
             model: should be a python class refering to pytorch model (torch.nn.Module)
@@ -36,12 +38,15 @@ class LocalModel(object):
         self.model = getattr(Models, self.model_name)(task_config)
 
     def get_weights(self):
+        print("(Jacob) get_weights")
         return self.model.get_weights()
 
     def set_weights(self, new_weights):
+        print("(Jacob) set_weights")
         self.model.set_weights(new_weights)
 
     def train_one_round(self):
+        print("(Jacob) train_one_round")
         losses = []
         for i in range(1, self.epoch + 1):
             loss = self.model.train_one_epoch()
@@ -51,6 +56,7 @@ class LocalModel(object):
         return self.model.get_weights(), sum(losses) / len(losses)
 
     def evaluate(self):
+        print("(Jacob) evaluate")
         loss, acc, recall = self.model.evaluate()
         return loss, acc, recall
 
@@ -64,9 +70,11 @@ class FederatedClient(object):
 
     def __init__(self, server_host, server_port, task_config_filename,
                  gpu, ignore_load):
+        print("(Jacob) init FederatedClient")
         os.environ['CUDA_VISIBLE_DEVICES'] = '%d' % gpu
         self.task_config = load_json(task_config_filename)
         # self.data_path = self.task_config['data_path']
+        print("(Jacob) The task to be completed:")
         print(self.task_config)
         self.ignore_load = ignore_load
 
@@ -91,19 +99,21 @@ class FederatedClient(object):
         self.logger.info(self.task_config)
         self.sio = SocketIO(server_host, server_port, None, {'timeout': 36000})
         self.register_handles()
-        print("sent wakeup")
+
         self.sio.emit('client_wake_up')
+        self.logger.info("sent wakeup")
         self.sio.wait()
 
     ########## Socket Event Handler ##########
     def on_init(self):
-        print('on init')
+        self.logger.info('(Jacob) on init')
         self.local_model = LocalModel(self.task_config)
         print("local model initialized done.")
         # ready to be dispatched for training
         self.sio.emit('client_ready')
 
     def load_stat(self):
+        self.logger.info("(Jacob) load_stat")
         loadavg = {}
         with open("/proc/loadavg") as fin:
             con = fin.read().split()
@@ -115,18 +125,22 @@ class FederatedClient(object):
         return loadavg['lavg_15']
 
     def register_handles(self):
+        self.logger.info("(Jacob) register_handles")
         ########## Socket IO messaging ##########
         def on_connect():
+            self.logger.info("(Jacob) on_connect")
             print('connect')
 
         def on_disconnect():
+            self.logger.info("(Jacob) on_disconnect")
             print('disconnect')
 
         def on_reconnect():
+            self.logger.info("(Jacob) on_reconnect")
             print('reconnect')
 
         def on_request_update(*args):
-
+            self.logger.info("(Jacob) on_request_update")
             req = args[0]
             print("update requested")
 
@@ -170,6 +184,7 @@ class FederatedClient(object):
             print("Emited...")
 
         def on_stop_and_eval(*args):
+            self.logger.info("(Jacob) on_stop_and_eval")
             self.logger.info("received aggregated model from server")
             req = args[0]
             cur_time = time.time()
@@ -196,6 +211,7 @@ class FederatedClient(object):
                 exit(0)
 
         def on_check_client_resource(*args):
+            self.logger.info("(Jacob) on_check_client_resource")
             req = args[0]
             print("check client resource.")
             if self.ignore_load:
@@ -237,6 +253,8 @@ class FederatedClient(object):
         # threading.Thread(target=simulate_data_gen, args=(self,)).start()
 
     def intermittently_sleep(self, p=.1, low=10, high=100):
+        self.logger.info("(Jacob) intermittently_sleep")
+        print("(Jacob) intermittently_sleep")
         if (random.random() < p):
             time.sleep(random.randint(low, high))
 

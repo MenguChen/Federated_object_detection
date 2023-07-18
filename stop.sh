@@ -10,3 +10,5 @@ if [ ! -n "$MODEL" ];then
 	exit
 fi
 ps -ef | grep ${DATASET}/${MODEL} | grep -v grep | awk '{print $2}' | xargs kill -9
+
+read -p "Press enter to close this window"

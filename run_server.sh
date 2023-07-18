@@ -29,4 +29,9 @@ fi
 LOG="experiments/logs/`date +'%m%d'`/${MODEL}/${DATASET}/fl_server.log"
 echo Loggin output to "$LOG"
 
-nohup python3 fl_server.py --config_file data/task_configs/${MODEL}/${DATASET}/${MODEL}_task.json --port ${PORT} > ${LOG} &
+conda init
+source activate fedlearn
+nohup python fl_server.py --config_file data/task_configs/${MODEL}/${DATASET}/${MODEL}_task.json --port ${PORT} > ${LOG} &
+conda deactivate fedlearn
+
+read -p "Press enter to close this window"
